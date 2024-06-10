@@ -9,7 +9,7 @@ const jobSchema = new Schema({
     enum: categories,
   },
   image: String,
-  price: String,
+  salary: String,
   description: String,
 });
 

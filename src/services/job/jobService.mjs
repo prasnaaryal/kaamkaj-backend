@@ -49,7 +49,7 @@ export const updateJob = async (
   name,
   category,
   image,
-  price,
+  salary,
   description
 ) => {
   try {
@@ -63,8 +63,8 @@ export const updateJob = async (
     if (image) {
       job.image = image;
     }
-    if (price) {
-      job.price = price;
+    if (salary) {
+      job.salary = salary;
     }
     if (description) {
       job.description = description;
