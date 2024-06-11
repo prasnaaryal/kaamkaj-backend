@@ -3,15 +3,14 @@ import { Schema, model } from "mongoose";
 import categories from "../utils/categories.js";
 
 const jobSchema = new Schema({
-    name: String,
-    category: {
-        type : String,
-        enum : categories,
-    },
-    image: String,
-    price: String,
-    description: String,
+  name: String,
+  category: {
+    type: String,
+    enum: categories,
+  },
+  image: String,
+  salary: String,
+  description: String,
 });
 
-
-export default model("Product", jobSchema);
+export default model("Job", jobSchema);
