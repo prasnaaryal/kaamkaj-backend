@@ -3,12 +3,9 @@ import { Schema, model } from "mongoose";
 import isEmail from "validator/lib/isEmail.js";
 
 const userSchema = new Schema({
-  firstName: {
-    type: String,
-    required: true,
-  },
+ 
 
-  lastName: {
+  fullName: {
     type: String,
     required: true,
   },

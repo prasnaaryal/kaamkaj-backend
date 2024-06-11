@@ -2,8 +2,7 @@ import * as AuthService from "../../services/auth/authService.mjs";
 
 export const register = async (req, res) => {
   const {
-    firstName,
-    lastName,
+    fullName,
     email,
     password,
     confirmPassword,
@@ -14,8 +13,7 @@ export const register = async (req, res) => {
       email.trim(),
       password.trim(),
       confirmPassword.trim(),
-      firstName.trim(),
-      lastName.trim(),
+      fullName.trim(),
       image
     );
     return res.status(200).json({ message: "User created successfully", user });

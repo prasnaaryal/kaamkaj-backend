@@ -7,8 +7,7 @@ export async function registerUser(
   email,
   password,
   confirmPassword,
-  firstName,
-  lastName,
+  fullName,
   image
 ) {
   try {
@@ -27,8 +26,8 @@ export async function registerUser(
     const hashedPassword = await bcrypt.hash(password, 10);
     // Create a new user
     const newUser = new User({
-      firstName,
-      lastName,
+      fullName,
+    
       email,
       password: hashedPassword,
       image,
