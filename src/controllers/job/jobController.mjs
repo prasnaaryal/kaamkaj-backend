@@ -4,10 +4,16 @@ export const createJob = async (req, res) => {
   const { name, category, image, salary, description } = req.body;
   try {
     const job = await JobService.createJob({
-      name,
+      jobTitle,
+      companyName,
       category,
-      image,
-      salary,
+      jobLocation,
+      employmentType,
+
+      experienceLevel,
+      responsibilites,
+      minSalary,
+      maxSalary,
       description,
     });
     res.status(201).send(job);
@@ -44,14 +50,29 @@ export const deleteJob = async (req, res) => {
 export const updateJob = async (req, res) => {
   try {
     const { jobId } = req.params;
-    const { name, category, image, salary, description } = req.body;
+    const { jobTitle,
+      companyName,
+      category,
+      jobLocation,
+      experienceLevel,
+      responsibilites,
+      minSalary,
+      employmentType,
+
+      maxSalary,
+      description, } = req.body;
     const job = await JobService.updateJob(
       jobId,
-      name,
-      category,
-      image,
-      salary,
-      description
+      jobTitle,
+      companyName,
+      category, employmentType,
+
+      jobLocation,
+      experienceLevel,
+      responsibilites,
+      minSalary,
+      maxSalary,
+      description,
     );
     res.status(200).send(job);
   } catch (error) {
