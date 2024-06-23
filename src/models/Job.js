@@ -16,12 +16,14 @@ const jobSchema = new Schema({
     type: String,
     enum: experienceLevels,
   },
+  companyLogo:String,
   employmentType: {
     type: String,
     enum: employmentTypes,
   },
 
   responsibilites: String,
+  postingDate:String,
   minSalary: String,
   maxSalary: String,
   description: String,

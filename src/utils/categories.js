@@ -1,7 +1,11 @@
 const categories = [
-    "Remote",
-    "Hybrid",
-    "On-Site",
+    "Frontend Developer",
+    "Backend Developer",
+    "Full-Stack Developer",
+    "DevOps",
+    "UI/UX Designer",
+    "QA",
+    
   ];
   
   export default categories;

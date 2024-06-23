@@ -15,7 +15,7 @@ import { authenticateToken } from '../../middleware/index.js';
 const router = express.Router();
 // Define the routes
 
-router.post('/', authenticateToken,  createJob);
+router.post('/create-job', authenticateToken,  createJob);
 router.get('/getalljobs', getAllJobs);
 router.post('/search', getJobsByQuery);
 router.get('/:jobId', getJobsById);

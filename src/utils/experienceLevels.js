@@ -1,7 +1,8 @@
 const experienceLevels= [
-    "Remote",
-    "Hybrid",
-    "On-Site",
+    "Senior",
+    "Mid",
+    "Junior",
+    "Intern",
   ];
   
   export default experienceLevels;

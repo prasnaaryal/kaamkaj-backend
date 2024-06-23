@@ -1,6 +1,5 @@
 import express from "express";
-
-import { getAllemploymentTypes } from "../../services/employmentType/employmentTypeServices.js";
+import { getAllemploymentTypes } from "../../controllers/employmentType/employmentTypeController.js";
 
 const router = express.Router();
 

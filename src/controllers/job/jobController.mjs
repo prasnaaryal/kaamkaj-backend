@@ -1,7 +1,16 @@
 import * as JobService from "../../services/job/jobService.mjs";
 
 export const createJob = async (req, res) => {
-  const { name, category, image, salary, description } = req.body;
+  const { jobTitle,
+    companyName,
+    category,
+    jobLocation,
+    employmentType,
+    experienceLevel,
+    responsibilites,
+    minSalary,
+    maxSalary,
+    description,} = req.body;
   try {
     const job = await JobService.createJob({
       jobTitle,
