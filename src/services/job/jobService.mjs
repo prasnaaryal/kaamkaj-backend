@@ -87,3 +87,15 @@ export const getJobsById = async (jobId) => {
     throw new Error(error);
   }
 };
+
+export const getJobsByEmail = async (postedBy) => {
+  try {
+    const jobs = await jobModel.find({ postedBy });
+    if (!jobs) {
+      throw new Error("No jobs found for the given email");
+    }
+    return jobs;
+  } catch (error) {
+    throw new Error(error);
+  }
+};

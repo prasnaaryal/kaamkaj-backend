@@ -10,6 +10,8 @@ export const createJob = async (req, res) => {
     responsibilites,
     minSalary,
     maxSalary,
+    postedBy,
+
     description,} = req.body;
   try {
     const job = await JobService.createJob({
@@ -18,6 +20,7 @@ export const createJob = async (req, res) => {
       category,
       jobLocation,
       employmentType,
+      postedBy,
 
       experienceLevel,
       responsibilites,
@@ -68,6 +71,7 @@ export const updateJob = async (req, res) => {
       minSalary,
       employmentType,
 
+
       maxSalary,
       description, } = req.body;
     const job = await JobService.updateJob(
@@ -75,6 +79,7 @@ export const updateJob = async (req, res) => {
       jobTitle,
       companyName,
       category, employmentType,
+      category,
 
       jobLocation,
       experienceLevel,
@@ -95,5 +100,15 @@ export const getJobsById = async (req, res) => {
     res.status(200).send(job);
   } catch (error) {
     res.status(500).send({ message: error.message });
+  }
+};
+
+export const getJobsByEmail = async (req, res) => {
+  const { email } = req.params;
+  try {
+    const jobs = await JobService.getJobsByEmail(email);
+    res.status(200).json(jobs);
+  } catch (error) {
+    res.status(500).json({ message: 'Error fetching jobs', error });
   }
 };

@@ -27,6 +27,7 @@ const jobSchema = new Schema({
   minSalary: String,
   maxSalary: String,
   description: String,
+  postedBy:String,
 
 });
 
